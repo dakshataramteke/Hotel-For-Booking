@@ -1,14 +1,33 @@
-const swiper = new Swiper('.mySwiper', {
+let swiper = new Swiper('.mySwiper', {
     direction: 'vertical',
     loop: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    },
-
+    }
+});
+    //Our Partner
+     swiper = new Swiper('.our-partner', {
+        slidesPerView :5,
+        spaceBetween:30,
+        loop: true,
     autoplay: {
-     delay:3500,
+     delay:2000,
     },
+    breakpoints:{
+        '991':{
+            slidesPerView:5,
+            spaceBetween :10,
+        },
+        '767':{
+            slidesPerView:3,
+            spaceBetween:10,
+        },
+        '320':{
+            slidesPerView:2,
+            spaceBetween:8
+        }
+    }
   });
 
 //   header scroll 
